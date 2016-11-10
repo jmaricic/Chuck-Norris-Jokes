@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dagger Demo</string>
+    <string name="joke_btn_text">Gimme Joke</string>
+    <string name="loading">Loading</string>
+</resources>

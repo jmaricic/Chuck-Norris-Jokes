@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="joke_text_view" type="id" />
+    <item name="joke_button" type="id" />
+
+</resources>
