@@ -6,12 +6,12 @@ import java.io.Serializable;
  * Created by josipmaricic on 10/11/2016.
  */
 
-public class Value implements Serializable {
+public class JokeData implements Serializable {
 
     private int id;
     private String joke;
 
-    public Value(int id, String joke) {
+    public JokeData(int id, String joke) {
         this.id = id;
         this.joke = joke;
     }

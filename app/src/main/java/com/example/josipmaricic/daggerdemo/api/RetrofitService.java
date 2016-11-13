@@ -1,6 +1,7 @@
 package com.example.josipmaricic.daggerdemo.api;
 
-import com.example.josipmaricic.daggerdemo.data.JokesResponse;
+import com.example.josipmaricic.daggerdemo.data.JokesListResponse;
+import com.example.josipmaricic.daggerdemo.data.RandomJokeResponse;
 
 import retrofit2.http.GET;
 import rx.Observable;
@@ -12,5 +13,8 @@ import rx.Observable;
 public interface RetrofitService {
 
     @GET("/jokes/random/")
-    Observable<JokesResponse> getRandomJoke();
+    Observable<RandomJokeResponse> getRandomJoke();
+
+    @GET("/jokes/random/15")
+    Observable<JokesListResponse> getRandomJokeList();
 }

@@ -10,6 +10,8 @@ import com.example.josipmaricic.daggerdemo.base.BaseActivity;
 import com.example.josipmaricic.daggerdemo.presentation.JokePresenter;
 import com.example.josipmaricic.daggerdemo.view.JokeView;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import butterknife.BindView;
@@ -58,6 +60,13 @@ public class JokeActivity extends BaseActivity implements JokeView {
     }
 
     @Override
+    public void showJokes(List<String> mData) {
+        if (mData != null) {
+            startActivity(JokeListActivity.getLaunchIntent(this, mData));
+        }
+    }
+
+    @Override
     public void showProgress() {
         showProgressDialog();
     }
@@ -65,5 +74,10 @@ public class JokeActivity extends BaseActivity implements JokeView {
     @Override
     public void hideProgress() {
         dismissProgressDialog();
+    }
+
+    @OnClick(R.id.joke_list_button)
+    void onJokeListBtnClick() {
+        jokePresenter.getListOfJokes();
     }
 }

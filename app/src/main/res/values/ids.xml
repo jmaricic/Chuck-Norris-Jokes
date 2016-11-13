@@ -3,5 +3,8 @@
 
     <item name="joke_text_view" type="id" />
     <item name="joke_button" type="id" />
+    <item name="joke_list_button" type="id" />
+    <item name="recycler_view" type="id" />
+    <item name="joke_list_text_view" type="id" />
 
 </resources>

@@ -7,4 +7,5 @@ package com.example.josipmaricic.daggerdemo.common;
 public class Constants {
 
     public static final String BASE_URL = "https://api.icndb.com";
+    public static final String DATA = "data";
 }

@@ -10,4 +10,6 @@ import com.example.josipmaricic.daggerdemo.view.JokeView;
 public interface JokePresenter extends Presenter<JokeView> {
 
     void getRandomJoke();
+
+    void getListOfJokes();
 }

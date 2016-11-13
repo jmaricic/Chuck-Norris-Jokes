@@ -1,7 +1,6 @@
 package com.example.josipmaricic.daggerdemo.module;
 
 import com.example.josipmaricic.daggerdemo.App;
-import com.example.josipmaricic.daggerdemo.module.NetworkModule;
 
 import javax.inject.Singleton;
 

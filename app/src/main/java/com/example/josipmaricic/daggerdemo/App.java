@@ -12,6 +12,7 @@ import com.example.josipmaricic.daggerdemo.module.AppModule;
 public class App extends Application {
 
     private static App sInstance;
+    protected AppComponent component;
 
     @NonNull
     public static App get() {
@@ -21,9 +22,6 @@ public class App extends Application {
     protected void setInstance(@NonNull App instance) {
         sInstance = instance;
     }
-
-    protected AppComponent component;
-
 
     @Override
     public void onCreate() {

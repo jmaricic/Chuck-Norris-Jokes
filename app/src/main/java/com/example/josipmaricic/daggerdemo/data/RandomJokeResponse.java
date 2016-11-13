@@ -6,12 +6,12 @@ import java.io.Serializable;
  * Created by josipmaricic on 10/11/2016.
  */
 
-public class JokesResponse implements Serializable {
+public class RandomJokeResponse implements Serializable {
 
     private String type;
-    private Value value;
+    private JokeData value;
 
-    public JokesResponse(String type, Value value) {
+    public RandomJokeResponse(String type, JokeData value) {
         this.type = type;
         this.value = value;
     }
@@ -24,11 +24,11 @@ public class JokesResponse implements Serializable {
         this.type = type;
     }
 
-    public Value getValue() {
+    public JokeData getJokeData() {
         return value;
     }
 
-    public void setValue(Value value) {
-        this.value = value;
+    public void setJokeData(JokeData jokeData) {
+        this.value = jokeData;
     }
 }
