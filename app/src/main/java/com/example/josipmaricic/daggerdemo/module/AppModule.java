@@ -1,6 +1,8 @@
 package com.example.josipmaricic.daggerdemo.module;
 
 import com.example.josipmaricic.daggerdemo.App;
+import com.example.josipmaricic.daggerdemo.helper.image.ImageHelper;
+import com.example.josipmaricic.daggerdemo.helper.image.ImageHelperInterface;
 
 import javax.inject.Singleton;
 
@@ -22,5 +24,10 @@ public class AppModule {
     @Singleton
     public App provideApp() {
         return app;
+    }
+
+    @Provides
+    public ImageHelperInterface provideImageHelper() {
+        return new ImageHelper();
     }
 }

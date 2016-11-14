@@ -13,8 +13,10 @@ import com.example.josipmaricic.daggerdemo.App;
 import com.example.josipmaricic.daggerdemo.R;
 import com.example.josipmaricic.daggerdemo.base.BaseActivity;
 import com.example.josipmaricic.daggerdemo.common.Constants;
+import com.example.josipmaricic.daggerdemo.helper.dialog.DialogHelper;
 import com.example.josipmaricic.daggerdemo.presentation.JokeListPresenter;
 import com.example.josipmaricic.daggerdemo.ui.adapter.JokeListAdapter;
+import com.example.josipmaricic.daggerdemo.ui.listener.OnListItemClickListener;
 import com.example.josipmaricic.daggerdemo.view.JokeListView;
 
 import java.io.Serializable;
@@ -30,7 +32,7 @@ import butterknife.ButterKnife;
  * Created by Josip on 13.11.2016..
  */
 
-public class JokeListActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener, JokeListView {
+public class JokeListActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener, JokeListView, OnListItemClickListener {
 
     @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
@@ -78,6 +80,7 @@ public class JokeListActivity extends BaseActivity implements SwipeRefreshLayout
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setData(mData);
+        mAdapter.setListener(this);
     }
 
     @Override
@@ -103,5 +106,11 @@ public class JokeListActivity extends BaseActivity implements SwipeRefreshLayout
     @Override
     public void hideProgress() {
         mSwipeRefreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public void onItemClick(String joke) {
+        DialogHelper.showJokeDialog(getSupportFragmentManager(), joke);
+        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
     }
 }

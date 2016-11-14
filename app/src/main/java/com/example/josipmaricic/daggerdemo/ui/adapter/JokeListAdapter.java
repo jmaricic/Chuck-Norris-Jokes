@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import com.example.josipmaricic.daggerdemo.R;
 import com.example.josipmaricic.daggerdemo.ui.holder.JokeListHolder;
+import com.example.josipmaricic.daggerdemo.ui.listener.OnListItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,11 @@ import java.util.List;
 public class JokeListAdapter extends RecyclerView.Adapter<JokeListHolder> {
 
     private List<String> mData = new ArrayList<>();
+    private OnListItemClickListener mListener;
+
+    public void setListener(OnListItemClickListener listener) {
+        this.mListener = listener;
+    }
 
     public void setData(List<String> data) {
         mData.clear();
@@ -28,7 +34,7 @@ public class JokeListAdapter extends RecyclerView.Adapter<JokeListHolder> {
     @Override
     public JokeListHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View currentView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_holder_jokes, parent, false);
-        return new JokeListHolder(currentView);
+        return new JokeListHolder(currentView, mListener);
     }
 
     @Override
