@@ -1,6 +1,8 @@
 package com.example.josipmaricic.daggerdemo.module;
 
 import com.example.josipmaricic.daggerdemo.api.RetrofitService;
+import com.example.josipmaricic.daggerdemo.presentation.JokeListPresenter;
+import com.example.josipmaricic.daggerdemo.presentation.JokeListPresenterImpl;
 import com.example.josipmaricic.daggerdemo.presentation.JokePresenter;
 import com.example.josipmaricic.daggerdemo.presentation.JokePresenterImpl;
 
@@ -16,5 +18,10 @@ public class PresentationModule {
     @Provides
     JokePresenter providePresenter(RetrofitService retrofitService) {
         return new JokePresenterImpl(retrofitService);
+    }
+
+    @Provides
+    JokeListPresenter provideJokeListPresenter(RetrofitService retrofitService) {
+        return new JokeListPresenterImpl(retrofitService);
     }
 }
