@@ -9,8 +9,8 @@
         android:id="@id/joke_list_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="50dp"
-        android:padding="20dp"
+        android:minHeight="@dimen/dimen_big"
+        android:padding="@dimen/dimen_normal"
         android:textSize="14sp"
         android:textColor="@color/colorPrimaryDark"
         tools:text="ahaha" />
@@ -19,6 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorPrimary"
-        android:layout_margin="5dp"/>
+        android:layout_margin="@dimen/dimen_small"/>
 
 </LinearLayout>

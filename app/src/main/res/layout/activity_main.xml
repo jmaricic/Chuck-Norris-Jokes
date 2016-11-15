@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="3"
-    tools:context="com.example.josipmaricic.daggerdemo.ui.JokeActivity">
+    tools:context="com.example.josipmaricic.chucknorrisjoke.ui.JokeActivity">
 
     <TextView
         android:id="@id/joke_text_view"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_margin="50dp"
+        android:layout_margin="@dimen/dimen_big"
         android:layout_weight="2"
         android:gravity="center"
         android:textColor="@color/colorPrimaryDark"
@@ -26,7 +26,7 @@
         android:layout_gravity="center"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:padding="10sp"
+        android:padding="@dimen/dimen_small"
         android:text="@string/joke_btn_text"
         android:textColor="@color/white" />
 
@@ -35,10 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/dimen_small"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:padding="10sp"
+        android:padding="@dimen/dimen_small"
         android:text="@string/joke_list_btn_text"
         android:textColor="@color/white" />
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dagger Demo</string>
+    <string name="app_name">Chuck Norris jokes</string>
     <string name="joke_btn_text">Tell me a joke</string>
     <string name="loading">Loading</string>
     <string name="joke_list_btn_text">Show list of jokes</string>
