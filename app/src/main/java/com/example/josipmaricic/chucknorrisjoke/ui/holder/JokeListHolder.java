@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.josipmaricic.chucknorrisjoke.R;
+import com.example.josipmaricic.chucknorrisjoke.ui.listener.OnFavoriteItemClickListener;
 import com.example.josipmaricic.chucknorrisjoke.ui.listener.OnListItemClickListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnLongClick;
 
 /**
  * Created by Josip on 13.11.2016..
@@ -22,11 +24,13 @@ public class JokeListHolder extends RecyclerView.ViewHolder {
     TextView mJokeTextView;
 
     private OnListItemClickListener mListener;
+    private OnFavoriteItemClickListener mFavoriteListener;
 
-    public JokeListHolder(View itemView, OnListItemClickListener listener) {
+    public JokeListHolder(View itemView, OnListItemClickListener listener, OnFavoriteItemClickListener favoriteListener) {
         super(itemView);
         ButterKnife.bind(this, itemView);
         this.mListener = listener;
+        this.mFavoriteListener = favoriteListener;
     }
 
     public void setJoke(String mJoke) {
@@ -40,5 +44,13 @@ public class JokeListHolder extends RecyclerView.ViewHolder {
         if (mListener != null) {
             mListener.onItemClick(mJokeTextView.getText().toString());
         }
+    }
+
+    @OnLongClick(R.id.joke_list_text_view)
+    boolean onLongItemClick() {
+        if (mFavoriteListener != null) {
+            mFavoriteListener.onFavoriteItemClicked(mJokeTextView.getText().toString());
+        }
+        return true;
     }
 }

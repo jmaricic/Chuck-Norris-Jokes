@@ -17,4 +17,10 @@
         android:padding="@dimen/dimen_small"
         android:textColor="@color/colorPrimaryDark" />
 
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"/>
+
 </LinearLayout>
