@@ -1,6 +1,7 @@
 package com.example.josipmaricic.chucknorrisjoke.mvp.interactor;
 
 import com.example.josipmaricic.chucknorrisjoke.api.RetrofitService;
+import com.example.josipmaricic.chucknorrisjoke.data.JokesListResponse;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -19,25 +20,9 @@ public class JokeListInteractorImpl implements JokeListInteractor {
     }
 
     @Override
-    public Observable getListOfJokes() {
+    public Observable<JokesListResponse> getListOfJokes() {
         return retrofitService.getRandomJokeList()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
-//                .subscribe(new Observer<JokesListResponse>() {
-//                    @Override
-//                    public void onCompleted() {
-//                        presenter.onJokeListCompleted();
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        presenter.onError(e.getMessage());
-//                    }
-//
-//                    @Override
-//                    public void onNext(JokesListResponse jokesListResponse) {
-//                        presenter.onNextJokeList(jokesListResponse);
-//                    }
-//                });
     }
 }

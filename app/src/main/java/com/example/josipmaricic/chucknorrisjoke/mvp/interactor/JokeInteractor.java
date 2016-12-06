@@ -1,6 +1,9 @@
 package com.example.josipmaricic.chucknorrisjoke.mvp.interactor;
 
 
+import com.example.josipmaricic.chucknorrisjoke.data.JokesListResponse;
+import com.example.josipmaricic.chucknorrisjoke.data.RandomJokeResponse;
+
 import rx.Observable;
 
 /**
@@ -9,7 +12,7 @@ import rx.Observable;
 
 public interface JokeInteractor {
 
-    Observable getRandomJoke();
+    Observable<RandomJokeResponse> getRandomJoke();
 
-    Observable getListOfJokes();
+    Observable<JokesListResponse> getListOfJokes();
 }
