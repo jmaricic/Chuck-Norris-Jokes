@@ -1,4 +1,4 @@
-package com.example.josipmaricic.chucknorrisjoke.view;
+package com.example.josipmaricic.chucknorrisjoke.mvp.view;
 
 import com.example.josipmaricic.chucknorrisjoke.base.BaseView;
 

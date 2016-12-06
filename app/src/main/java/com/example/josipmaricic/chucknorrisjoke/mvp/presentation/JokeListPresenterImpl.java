@@ -1,16 +1,14 @@
-package com.example.josipmaricic.chucknorrisjoke.presentation;
+package com.example.josipmaricic.chucknorrisjoke.mvp.presentation;
 
-import com.example.josipmaricic.chucknorrisjoke.api.RetrofitService;
 import com.example.josipmaricic.chucknorrisjoke.data.JokeData;
 import com.example.josipmaricic.chucknorrisjoke.data.JokesListResponse;
-import com.example.josipmaricic.chucknorrisjoke.view.JokeListView;
+import com.example.josipmaricic.chucknorrisjoke.mvp.interactor.JokeListInteractor;
+import com.example.josipmaricic.chucknorrisjoke.mvp.view.JokeListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import rx.Observer;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by Josip on 14.11.2016..
@@ -19,11 +17,11 @@ import rx.schedulers.Schedulers;
 public class JokeListPresenterImpl implements JokeListPresenter {
 
     private JokeListView mJokeListView;
-    private RetrofitService mRetrofitService;
     private List<String> mData = new ArrayList<>();
+    private JokeListInteractor jokeInteractor;
 
-    public JokeListPresenterImpl(RetrofitService mRetrofitService) {
-        this.mRetrofitService = mRetrofitService;
+    public JokeListPresenterImpl(JokeListInteractor jokeInteractor) {
+        this.jokeInteractor = jokeInteractor;
     }
 
     @Override
@@ -34,14 +32,8 @@ public class JokeListPresenterImpl implements JokeListPresenter {
     @Override
     public void getListOfJokes() {
         mJokeListView.showProgress();
-        mRetrofitService.getRandomJokeList()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(bindJokeListObserver());
-    }
-
-    private Observer<JokesListResponse> bindJokeListObserver() {
-        return new Observer<JokesListResponse>() {
+        jokeInteractor.getListOfJokes()
+        .subscribe(new Observer<JokesListResponse>() {
             @Override
             public void onCompleted() {
                 mJokeListView.hideProgress();
@@ -64,6 +56,7 @@ public class JokeListPresenterImpl implements JokeListPresenter {
                     }
                 }
             }
-        };
+        });
     }
+
 }

@@ -1,9 +1,9 @@
 package com.example.josipmaricic.chucknorrisjoke;
 
 import com.example.josipmaricic.chucknorrisjoke.helper.dialog.JokeDialog;
-import com.example.josipmaricic.chucknorrisjoke.module.AppModule;
-import com.example.josipmaricic.chucknorrisjoke.ui.JokeActivity;
-import com.example.josipmaricic.chucknorrisjoke.ui.JokeListActivity;
+import com.example.josipmaricic.chucknorrisjoke.dagger.AppModule;
+import com.example.josipmaricic.chucknorrisjoke.ui.activities.JokeActivity;
+import com.example.josipmaricic.chucknorrisjoke.ui.activities.JokeListActivity;
 
 import javax.inject.Singleton;
 

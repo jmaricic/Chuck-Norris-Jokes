@@ -7,4 +7,5 @@
     <string name="delete_message">Are you sure you want to delete this joke from favorites?</string>
     <string name="delete_yese">YES</string>
     <string name="delete_no">No</string>
+    <string name="favorite_jokes">Favorite Jokes</string>
 </resources>

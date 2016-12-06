@@ -16,9 +16,8 @@ import com.example.josipmaricic.chucknorrisjoke.R;
 import com.example.josipmaricic.chucknorrisjoke.common.Constants;
 import com.example.josipmaricic.chucknorrisjoke.database.DatabaseImpl;
 import com.example.josipmaricic.chucknorrisjoke.database.DatabaseInterface;
-import com.example.josipmaricic.chucknorrisjoke.database.model.Joke;
 import com.example.josipmaricic.chucknorrisjoke.helper.image.ImageHelperInterface;
-import com.example.josipmaricic.chucknorrisjoke.ui.FavoriteJokesActivity;
+import com.example.josipmaricic.chucknorrisjoke.ui.activities.FavoriteJokesActivity;
 
 import javax.inject.Inject;
 

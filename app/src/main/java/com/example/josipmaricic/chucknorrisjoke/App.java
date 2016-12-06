@@ -3,7 +3,7 @@ package com.example.josipmaricic.chucknorrisjoke;
 import android.app.Application;
 import android.support.annotation.NonNull;
 
-import com.example.josipmaricic.chucknorrisjoke.module.AppModule;
+import com.example.josipmaricic.chucknorrisjoke.dagger.AppModule;
 
 /**
  * Created by josipmaricic on 10/11/2016.

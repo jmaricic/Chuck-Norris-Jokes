@@ -1,4 +1,4 @@
-package com.example.josipmaricic.chucknorrisjoke.module;
+package com.example.josipmaricic.chucknorrisjoke.dagger;
 
 import com.example.josipmaricic.chucknorrisjoke.api.RetrofitService;
 import com.example.josipmaricic.chucknorrisjoke.common.Constants;

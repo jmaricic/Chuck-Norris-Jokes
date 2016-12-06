@@ -1,5 +1,7 @@
-package com.example.josipmaricic.chucknorrisjoke.ui;
+package com.example.josipmaricic.chucknorrisjoke.ui.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -34,6 +36,10 @@ public class FavoriteJokesActivity extends BaseActivity implements OnFavoriteIte
     private String mJoke;
 
     private DatabaseInterface mDatabase;
+
+    public static Intent getLaunchIntent(Context from) {
+        return new Intent(from, FavoriteJokesActivity.class);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -77,4 +83,5 @@ public class FavoriteJokesActivity extends BaseActivity implements OnFavoriteIte
         addData();
         mAdapter.setData(mData);
     }
+
 }

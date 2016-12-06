@@ -9,5 +9,6 @@
     <item name="refresh_layout" type="id" />
     <item name="image_view" type="id" />
     <item name="joke_text" type="id" />
+    <item name="my_favorite_jokes_button" type="id" />
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.josipmaricic.chucknorrisjoke.view;
+package com.example.josipmaricic.chucknorrisjoke.mvp.view;
 
 import com.example.josipmaricic.chucknorrisjoke.base.BaseView;
 
@@ -15,4 +15,6 @@ public interface JokeView extends BaseView {
     void showError(String message);
 
     void showJokes(List<String> mData);
+
+    void openFavoriteJokes();
 }

@@ -1,4 +1,4 @@
-package com.example.josipmaricic.chucknorrisjoke.module;
+package com.example.josipmaricic.chucknorrisjoke.dagger;
 
 import com.example.josipmaricic.chucknorrisjoke.App;
 import com.example.josipmaricic.chucknorrisjoke.helper.image.ImageHelper;

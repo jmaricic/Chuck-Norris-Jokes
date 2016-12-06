@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.josipmaricic.chucknorrisjoke.ui.JokeActivity"
+        <activity android:name="com.example.josipmaricic.chucknorrisjoke.ui.activities.JokeActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.josipmaricic.chucknorrisjoke.ui.JokeListActivity"
+        <activity android:name="com.example.josipmaricic.chucknorrisjoke.ui.activities.JokeListActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.example.josipmaricic.chucknorrisjoke.ui.FavoriteJokesActivity"
+        <activity android:name="com.example.josipmaricic.chucknorrisjoke.ui.activities.FavoriteJokesActivity"
             android:screenOrientation="portrait"/>
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.josipmaricic.chucknorrisjoke.ui;
+package com.example.josipmaricic.chucknorrisjoke.ui.activities;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,8 +7,8 @@ import android.widget.TextView;
 import com.example.josipmaricic.chucknorrisjoke.App;
 import com.example.josipmaricic.chucknorrisjoke.R;
 import com.example.josipmaricic.chucknorrisjoke.base.BaseActivity;
-import com.example.josipmaricic.chucknorrisjoke.presentation.JokePresenter;
-import com.example.josipmaricic.chucknorrisjoke.view.JokeView;
+import com.example.josipmaricic.chucknorrisjoke.mvp.presentation.JokePresenter;
+import com.example.josipmaricic.chucknorrisjoke.mvp.view.JokeView;
 
 import java.util.List;
 
@@ -67,6 +67,11 @@ public class JokeActivity extends BaseActivity implements JokeView {
     }
 
     @Override
+    public void openFavoriteJokes() {
+        startActivity(FavoriteJokesActivity.getLaunchIntent(JokeActivity.this));
+    }
+
+    @Override
     public void showProgress() {
         showProgressDialog();
     }
@@ -79,5 +84,10 @@ public class JokeActivity extends BaseActivity implements JokeView {
     @OnClick(R.id.joke_list_button)
     void onJokeListBtnClick() {
         mJokePresenter.getListOfJokes();
+    }
+
+    @OnClick(R.id.my_favorite_jokes_button)
+    void onFavoriteJokesBtnClick() {
+        mJokePresenter.seeMyFavoriteJokes();
     }
 }

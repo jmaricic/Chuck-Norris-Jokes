@@ -1,9 +1,8 @@
-package com.example.josipmaricic.chucknorrisjoke.ui;
+package com.example.josipmaricic.chucknorrisjoke.ui.activities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,10 +15,10 @@ import com.example.josipmaricic.chucknorrisjoke.R;
 import com.example.josipmaricic.chucknorrisjoke.base.BaseActivity;
 import com.example.josipmaricic.chucknorrisjoke.common.Constants;
 import com.example.josipmaricic.chucknorrisjoke.helper.dialog.DialogHelper;
-import com.example.josipmaricic.chucknorrisjoke.presentation.JokeListPresenter;
+import com.example.josipmaricic.chucknorrisjoke.mvp.presentation.JokeListPresenter;
 import com.example.josipmaricic.chucknorrisjoke.ui.adapter.JokeListAdapter;
 import com.example.josipmaricic.chucknorrisjoke.ui.listener.OnListItemClickListener;
-import com.example.josipmaricic.chucknorrisjoke.view.JokeListView;
+import com.example.josipmaricic.chucknorrisjoke.mvp.view.JokeListView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
