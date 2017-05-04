@@ -8,4 +8,5 @@
     <string name="delete_yese">YES</string>
     <string name="delete_no">No</string>
     <string name="favorite_jokes">Favorite Jokes</string>
+    <string name="new_branch">New branch created</string>
 </resources>
